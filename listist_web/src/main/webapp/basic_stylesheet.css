@@ -1,0 +1,161 @@
+body
+{
+    background-image: url('images/back.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.fade-in-image {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+    0% {opacity:0; top: 33%;}
+    100% {opacity:1; top: 35%;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0; top: 33%;}
+    100% {opacity:1; top: 35%;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0; top: 33%;}
+    100% {opacity:1; top: 35%;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0; top: 33%;}
+    100% {opacity:1; top: 35%;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0; top: 33%;}
+    100% {opacity:1; top: 35%;}
+}
+
+.myButton {
+    box-shadow: 0px 0px 19px -3px #405946;
+    background-color:transparent;
+    border-radius:11px;
+    border:1px solid #a9b8a9;
+    display:inline-block;
+    cursor:pointer;
+    color:#0d6e1c;
+    font-family:Courier New;
+    font-size:20px;
+    font-weight:bold;
+    padding:6px 8px;
+    text-decoration:none;
+}
+.myButton:hover {
+    background-color:transparent;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+.registerButton {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.loginButton {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.container {
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 2%;
+    font-family:Courier New;
+    background-color: #8ca48c;
+    border: 3px solid #0d6e1c;
+    border-radius: 11px;
+    padding: 2%;
+}
+
+.errorMessage {
+    font-size: 14px;
+    text-align: center;
+    float: initial;
+    color: red;
+    font-weight: bold;
+}
+
+.loginContainer {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 2%;
+    text-align: center;
+    font-family:Courier New;
+    background-color: #8ca48c;
+    border: 3px solid #0d6e1c;
+    border-radius: 11px;
+}
+
+.center-block {
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+
+}
+
+.content {
+    list-style-type: none;
+    margin: auto;
+    overflow: hidden;
+    background-color: #1a211a;
+    padding:1%;
+    width: 97%;
+}
+
+.delButton {
+    box-shadow: 0px 0px 19px -3px #594045;
+    background-color:transparent;
+    border-radius:9px;
+    border:1px solid #a9b8a9;
+    display:inline-block;
+    cursor:pointer;
+    color: #6e0d1c;
+    font-family:Courier New;
+    font-size:18px;
+    font-weight:bold;
+    padding:6px 8px;
+    text-decoration:none;
+    margin-top: 0.69%;
+    vertical-align: baseline;
+    float: right;
+    margin-right: 0.5%;
+}
+.delButton:hover {
+    background-color:transparent;
+}
+.delButton:active {
+    position:relative;
+    top:1px;
+}

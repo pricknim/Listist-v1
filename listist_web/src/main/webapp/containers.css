@@ -1,0 +1,68 @@
+.playlist_container {
+    width: 99%;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    background-color: #272f27;
+    block-size: auto;
+}
+
+.playlist_container:hover {
+    background-color: #374137;
+}
+
+.playlist_image {
+    position: relative;
+    height: 80px;
+    width: 90px;
+    padding: 1%;
+}
+
+.playlist_name {
+    padding-top: 1%;
+    font-size: 28px;
+    font-family:fantasy;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    color: #a0d49f;
+}
+
+.playlist_description {
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    padding-left: 1%;
+    padding-bottom: 0.5%;
+    color: gray;
+}
+
+.song_container {
+    width: 99%;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(185, 212, 178);
+    background-color: #272f27;
+    block-size: auto;
+    display: inline-block;
+}
+
+.song_container:hover {
+    color: rgb(140, 203, 140);
+    background-color: #1c211c;
+}
+
+.song_name {
+    padding-top: 1%;
+    font-size: 25px;
+    font-family:fantasy;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    padding-left: 1%;
+    padding-bottom: 1%;
+}
+
+.checkbox_poz {
+    float: right;
+    margin-right: 0.5%;
+    margin-top: 1%;
+}

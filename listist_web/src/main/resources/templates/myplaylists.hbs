@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="basic_stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="containers.css">
+    <title>My playlists</title>
+</head>
+<body>
+<div class="menu">
+    <button class="menuButton">
+        <a href="myplaylists"><img src="images/listist123.png"></a>
+    </button>
+    <div class="user" onclick="logout()">
+        <img src="images/logout.png" width="60" height="50" align="right">
+    </div>
+    <ul>
+        <li>
+            <a href="myplaylists">My Playlists</a>
+        </li>
+        <li>
+            <a href="createplaylist">Create</a>
+        </li>
+        <li>
+            <a href="songs">Browse Songs</a>
+        </li>
+    </ul>
+</div>
+
+<div class="content">
+    {{#each playlist}}
+        <div class="playlist_container" id={{@index}}>
+            <img src="images/playlist.png" onclick="redirect('{{this/name}}')">
+            <div class="playlist_name" id="playlist_name" onclick="redirect('{{this/name}}')">{{this/name}}</div>
+            <button class="delButton" onclick="delPlaylist(this)">Delete</button>
+        </div>
+    {{else}}
+        <div class="playlist_container">You don't have any playlists yet.</div>
+    {{/each}}
+</div>
+<script src="myplaylists.js"></script>
+<script src="logout.js"></script>
+</body>
+</html>

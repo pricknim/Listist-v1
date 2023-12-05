@@ -1,0 +1,5 @@
+rootProject.name = 'listist'
+include 'listist_backend'
+include 'listist_frontend'
+include 'listist_web'
+

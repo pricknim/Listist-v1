@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="basic_stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="containers.css">
+    <title>Songs</title>
+</head>
+<body>
+<div class="menu">
+    <button class="menuButton">
+        <a href="myplaylists"><img src="images/listist123.png"></a>
+    </button>
+    <div class="user" onclick="logout()">
+        <img src="images/logout.png" width="60" height="50" align="right">
+    </div>
+    <ul>
+        <li>
+            <a href="myplaylists">My Playlists</a>
+        </li>
+        <li>
+            <a href="createplaylist">Create</a>
+        </li>
+        <li>
+            <a href="songs">Browse Songs</a>
+        </li>
+    </ul>
+</div>
+
+<div class="content" id="content">
+    <input type="text" name="title" id="title" minlength="1" placeholder="Enter song title">
+    <input type="text" name="artist" id="artist" minlength="1" placeholder="Enter artist name">
+    <button class="myButton" onclick="sendSong()">Upload</button>
+    <div class="errorMessage" id="error"></div>
+    <br>
+    <hr>
+    {{#each song}}
+        <div class="song_container" id={{@index}}>
+            <div class="song_name" id="s_title">{{this/title}}</div><div class="song_name"> - </div><div class="song_name" id="s_artist">{{this/artist}}</div>
+            <button class="delButton" onclick="deleteSong(this)">Delete</button>
+            <br>
+        </div>
+    {{else}}
+        <div class="song_container">
+            <p>There are no songs registered.</p>
+        </div>
+    {{/each}}
+</div>
+</body>
+<script src="songScripts.js"></script>
+<script src="logout.js"></script>
+</html>
