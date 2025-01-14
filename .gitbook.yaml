@@ -1,0 +1,5 @@
+root: ./docs/
+
+structure:
+  first_part: ./first_page.mkd
+  second_part: ./section_1/second_page.mkd
