@@ -1,4 +1,4 @@
-root: ./docs/
+root: ./
 
 structure:
   first_part: ./first_page.mkd
