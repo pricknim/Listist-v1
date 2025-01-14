@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="basic_stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="containers.css">
+    <title>{{name}}</title>
+</head>
+<style>
+    .myButton {
+        margin-top: 0.69%;
+        vertical-align: baseline;
+        float: right;
+        margin-right: 0.5%;
+    }
+
+</style>
+<body>
+<div class="menu">
+    <button class="menuButton">
+        <a href="myplaylists"><img src="images/listist123.png"></a>
+    </button>
+    <div class="user" onclick="logout()">
+        <img src="images/logout.png" width="60" height="50" align="right">
+    </div>
+    <ul>
+        <li>
+            <a href="myplaylists">My Playlists</a>
+        </li>
+        <li>
+            <a href="createplaylist">Create</a>
+        </li>
+        <li>
+            <a href="songs">Browse Songs</a>
+        </li>
+    </ul>
+</div>
+
+<div class="content" id="content1">
+    <div class="playlist_name" id="playlist_name">{{name}}</div>
+    <div class="errorMessage" id="error"></div>
+    <br>
+    <hr>
+    {{#each song}}
+        <div class="song_container" id="{{@index}}1">
+            <div class="song_name" id="s_title1">{{this/title}}</div><div class="song_name"> - </div><div class="song_name" id="s_artist1">{{this/artist}}</div>
+            <button class="delButton" onclick="removeSong(this)">Delete</button>
+            <br>
+        </div>
+    {{else}}
+        <div class="song_container">
+            <p>There are no songs in this playlist.</p>
+        </div>
+    {{/each}}
+</div>
+<br>
+<hr>
+<br>
+<div class="content" id="content2">
+    {{#each unused}}
+        <div class="song_container" id="{{@index}}2">
+            <div class="song_name" id="s_title2">{{this/title}}</div><div class="song_name"> - </div><div class="song_name" id="s_artist2">{{this/artist}}</div>
+            <button class="myButton" onclick="addSong(this)">Add</button>
+            <br>
+        </div>
+    {{else}}
+        <div class="song_container">
+            <p>There are no new songs to add.</p>
+        </div>
+    {{/each}}
+</div>
+</body>
+<script src="playlist.js"></script>
+<script src="logout.js"></script>
+</html>

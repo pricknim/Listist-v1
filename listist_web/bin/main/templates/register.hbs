@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="basic_stylesheet.css">
+    <title>Register</title>
+</head>
+<style>
+    .passwordDesc {
+        font-size: 13px;
+        text-align: center;
+        float: inside;
+    }
+
+    .errorMessage {
+        font-size: 14px;
+        text-align: center;
+        float: initial;
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<body>
+
+<form name="registration"> <!--onsubmit="sendForm() nem mondtam meg konkretan, hogy ez egy post metodus ; azert nem volt jo"-->
+    <div class="container">
+        <h1>Register</h1>
+        <p>Fill in this form to create an account.</p>
+        <hr>
+
+        <label for="username"><b>Username</b></label>
+        <div class="center-block">
+            <input type="text" placeholder="Enter username" name="username" id="username" maxlength="20" required>
+            <div class="errorMessage">
+                <label id="usernameError"></label>
+            </div>
+        </div>
+        <br>
+        <label for="email"><b>Email</b></label>
+        <div class="center-block">
+            <input type="text" placeholder="Enter Email" name="email" id="email" maxlength="35" required>
+            <div class="errorMessage">
+                <label id="emailError"></label>
+            </div>
+        </div>
+        <br>
+        <label for="psw"><b>Password</b></label>
+        <div class="passwordDesc">Password should be min. 6 letter longs, include big and small letters and symbols.</div>
+        <div class="center-block">
+            <input type="password" placeholder="Enter Password" name="password" id="psw" maxlength="50" required>
+            <div class="errorMessage">
+                <label id="passwordError"></label>
+            </div>
+        </div>
+        <br>
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <div class="center-block">
+            <input type="password" placeholder="Repeat Password" name="password2" id="psw-repeat" maxlength="50" required>
+        </div>
+        <hr>
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <button type="button" onclick="sendForm()" class="myButton">Register</button>
+    </div>
+    <div class="loginContainer">
+        <p>Already have an account? <a href="login">Log in</a>.</p>
+    </div>
+</form>
+
+</body>
+
+<script src="registrationSend.js"></script>
+
+</html>

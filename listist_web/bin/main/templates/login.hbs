@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="basic_stylesheet.css">
+    <title>Login</title>
+</head>
+
+<style>
+    .errorMessage {
+        font-size: 14px;
+        text-align: center;
+        float: initial;
+        color: red;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+<form name="login">
+    <div class="container">
+        <div class="center-block">
+            <h1>Login</h1>
+            <hr>
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter username" name="username" id="username" required>
+            <div class="errorMessage">
+                <label id="usernameError"></label>
+            </div>
+            <br>
+            <br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <div class="errorMessage">
+                <label id="pswError"></label>
+            </div>
+            <br>
+            <br>
+            <button type="button" onclick="sendLogin()" class="myButton">Login</button>
+            <br>
+        </div>
+    </div>
+    <div class="loginContainer">
+        <p>Don't have an account? <a href="register">Register!</a>.</p>
+    </div>
+</form>
+</body>
+
+<script src="loginSend.js"></script>
+
+</html>
